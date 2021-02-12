@@ -10,10 +10,13 @@ devtools::create("kb.yahoo")
 
 setwd("C:/Users/Kristian/Git/kb.yahoo")
 
-document()
+## Run this line after every change to R functions or DESCRIPTION
+devtools::document(pkg = "C:/Users/Kristian/Git/kb.yahoo")
 
-install("C:/Users/Kristian/Git/kb.yahoo")
+devtools::install("C:/Users/Kristian/Git/kb.yahoo", upgrade = FALSE)
 
 library(kb.yahoo)
 
-devtools::install_github("kristian-bak/kb.yahoo")
+# devtools::install_github("kristian-bak/kb.yahoo")
+
+f_load(ticker = "MATAS.CO")
