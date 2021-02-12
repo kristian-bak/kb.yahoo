@@ -37,6 +37,8 @@ f_change <- function(x, digits = 5) {
 #'
 #' @return A data.table
 #' @export
+#' @import data.table 
+#' @import quantmod
 
 f_load <- function(ticker, from_date = "2014-01-01") {
   
@@ -55,7 +57,7 @@ f_load <- function(ticker, from_date = "2014-01-01") {
                        old = names(data)[grepl(ticker, names(data))], 
                        new = gsub(paste0(ticker, "."), "", names(data)[grepl(ticker, names(data))]))
   
-  data[, Change := f_change(Close)]
+  data[, Change := f_change(Close)][]
   
   data.table::setcolorder(data, neworder = c("Date", "Open", "Low", "High", "Close", "Adjusted", "Change", "Volume"))
   
