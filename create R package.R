@@ -15,3 +15,5 @@ document()
 install("C:/Users/Kristian/Git/kb.yahoo")
 
 library(kb.yahoo)
+
+devtools::install_github("kristian-bak/kb.yahoo")
