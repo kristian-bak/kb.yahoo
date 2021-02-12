@@ -12,7 +12,7 @@ setwd("C:/Users/Kristian/Git/kb.yahoo")
 
 document()
 
-install("C:/Users/Kristian/Git/kb.yahoo")
+devtools::install("C:/Users/Kristian/Git/kb.yahoo")
 
 library(kb.yahoo)
 
