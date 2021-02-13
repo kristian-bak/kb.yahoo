@@ -7,7 +7,7 @@
 f_load(ticker, from_date = "2014-01-01")
 }
 \arguments{
-\item{ticker}{ticker code from Yahoo}
+\item{ticker}{ticker code from Yahoo. Provide a vector of ticker codes to get multiple stocks.}
 
 \item{from_date}{loads data from the date untill today. Date format is yyyy-mm-dd.}
 }

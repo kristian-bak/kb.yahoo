@@ -2,6 +2,7 @@
 library(devtools)
 library(roxygen2)
 library(usethis)
+library(testthat)
 
 setwd("C:/Users/Kristian/Documents")
 
@@ -36,5 +37,6 @@ devtools::test()
 
 ## After every change, do this:
 
+setwd("C:/Users/Kristian/Git/kb.yahoo")
 devtools::document(pkg = "C:/Users/Kristian/Git/kb.yahoo")
 devtools::test(stop_on_failure = TRUE)
