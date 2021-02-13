@@ -31,8 +31,8 @@ f_change <- function(x, digits = 5) {
   return(y)
 }
 
-#' This function loads data from Yahoo.
-#' @param ticker ticker code from Yahoo
+#' This function loads one stock from Yahoo.
+#' @param ticker ticker code from Yahoo. Use f_load to multiple stocks. 
 #' @param from_date loads data from the date untill today. Date format is yyyy-mm-dd. 
 #'
 #' @return A data.table
@@ -40,12 +40,17 @@ f_change <- function(x, digits = 5) {
 #' @import data.table 
 #' @import quantmod
 
-f_load <- function(ticker, from_date = "2014-01-01") {
+f_load_one <- function(ticker, from_date = "2014-01-01") {
   
   data <- f_try_catch(quantmod::getSymbols(ticker, auto.assign = FALSE, 
                                            from = from_date, src = 'yahoo'))
   if (is.null(data$value)) {
-    return(data$error)
+    dt <- data.table::data.table("Ticker" = ticker, 
+                                 "Date" = NA, "Open" = NA, 
+                                 "Low" = NA, "High" = NA, 
+                                 "Close" = NA, "Adjusted" = NA, 
+                                 "Change" = NA, "Volume" = NA)
+    return(dt)
   }
   
   data <- data$value
@@ -58,9 +63,28 @@ f_load <- function(ticker, from_date = "2014-01-01") {
                        new = gsub(paste0(ticker, "."), "", names(data)[grepl(ticker, names(data))]))
   
   data[, Change := f_change(Close)][]
+  data[, Ticker := ticker]
   
-  data.table::setcolorder(data, neworder = c("Date", "Open", "Low", "High", "Close", "Adjusted", "Change", "Volume"))
+  data.table::setcolorder(data, neworder = c("Ticker", "Date", "Open", "Low", "High", 
+                                             "Close", "Adjusted", "Change", "Volume"))
   
   return(data)
+  
+}
+
+#' This function loads data from Yahoo.
+#' @param ticker ticker code from Yahoo. Provide a vector of ticker codes to get multiple stocks. 
+#' @param from_date loads data from the date untill today. Date format is yyyy-mm-dd. 
+#'
+#' @return A data.table
+#' @export
+
+f_load <- function(ticker, from_date = "2014-01-01") {
+  
+  df_list <- lapply(X = ticker, FUN = f_load_one, from_date = from_date)
+  
+  df_out <- do.call("rbind", df_list)
+  
+  return(df_out)
   
 }
