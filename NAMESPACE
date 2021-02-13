@@ -2,6 +2,7 @@
 
 export(f_change)
 export(f_load)
+export(f_ticker)
 export(f_try_catch)
 import(data.table)
 import(quantmod)
