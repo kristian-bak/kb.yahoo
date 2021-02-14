@@ -1,0 +1,26 @@
+Exchange_index;Company_Name;Symbol;Company_Symbol;Volume
+OMXC25;Danske Bank A/S;DANSKE.CO;Danske Bank A/S (DANSKE.CO);1,214,033
+OMXC25;Vestas Wind Systems A/S;VWS.CO;Vestas Wind Systems A/S (VWS.CO);679,409
+OMXC25;Royal Unibrew A/S;RBREW.CO;Royal Unibrew A/S (RBREW.CO);46,179
+OMXC25;Coloplast A/S;COLO-B.CO;Coloplast A/S (COLO-B.CO);175,874
+OMXC25;Genmab A/S;GMAB.CO;Genmab A/S (GMAB.CO);81,747
+OMXC25;A.P. Møller - Mærsk A/S;MAERSK-A.CO;A.P. Møller - Mærsk A/S (MAERSK-A.CO);9,913
+OMXC25;Novozymes A/S;NZYM-B.CO;Novozymes A/S (NZYM-B.CO);426,878
+OMXC25;SimCorp A/S;SIM.CO;SimCorp A/S (SIM.CO);103,356
+OMXC25;ROCKWOOL International A/S;ROCK-B.CO;ROCKWOOL International A/S (ROCK-B.CO);67,169
+OMXC25;Carlsberg A/S;CARL-B.CO;Carlsberg A/S (CARL-B.CO);178,711
+OMXC25;Ørsted A/S;ORSTED.CO;Ørsted A/S (ORSTED.CO);693,971
+OMXC25;A.P. Møller - Mærsk A/S;MAERSK-B.CO;A.P. Møller - Mærsk A/S (MAERSK-B.CO);41,187
+OMXC25;H. Lundbeck A/S;LUN.CO;H. Lundbeck A/S (LUN.CO);370,854
+OMXC25;Bavarian Nordic A/S;BAVA.CO;Bavarian Nordic A/S (BAVA.CO);490,162
+OMXC25;Pandora A/S;PNDORA.CO;Pandora A/S (PNDORA.CO);205,837
+OMXC25;FLSmidth & Co. A/S;FLS.CO;FLSmidth & Co. A/S (FLS.CO);386,158
+OMXC25;Tryg A/S;TRYG.CO;Tryg A/S (TRYG.CO);305,574
+OMXC25;Netcompany Group A/S;NETC.CO;Netcompany Group A/S (NETC.CO);85,130
+OMXC25;Chr. Hansen Holding A/S;CHR.CO;Chr. Hansen Holding A/S (CHR.CO);263,623
+OMXC25;Novo Nordisk A/S;NOVO-B.CO;Novo Nordisk A/S (NOVO-B.CO);2,663,616
+OMXC25;Ambu A/S;AMBU-B.CO;Ambu A/S (AMBU-B.CO);592,346
+OMXC25;Demant A/S;DEMANT.CO;Demant A/S (DEMANT.CO);367,233
+OMXC25;ISS A/S;ISS.CO;ISS A/S (ISS.CO);1,548,809
+OMXC25;DSV Panalpina A/S;DSV.CO;DSV Panalpina A/S (DSV.CO);722,560
+OMXC25;GN Store Nord A/S;GN.CO;GN Store Nord A/S (GN.CO);589,527

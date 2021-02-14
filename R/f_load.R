@@ -57,11 +57,10 @@ f_load_one <- function(ticker, from_date = "2014-01-01") {
   data <- data.frame(data)
   data$Date <- rownames(data)
   data <- data.table::data.table(data)
+  var_rename <- c("Open", "High", "Low", "Close", "Volume", "Adjusted", "Date")
   
-  data.table::setnames(data, 
-                       old = names(data)[grepl(ticker, names(data))], 
-                       new = gsub(paste0(ticker, "."), "", names(data)[grepl(ticker, names(data))]))
-  
+  data.table::setnames(data, old = names(data), new = var_rename)
+
   data[, Change := f_change(Close)][]
   data[, Ticker := ticker]
   
