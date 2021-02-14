@@ -35,8 +35,22 @@ usethis::use_test("f_load")
 
 devtools::test()
 
+## Adding data needed in functions:
+
+symbols <- read.table(file = "./data/symbols/symbols.txt", header = TRUE, sep = ";")
+#save(symbols, file = "./data/symbols.rda")
+
+usethis::use_data(symbols, overwrite = TRUE)
+
 ## After every change, do this:
 
 setwd("C:/Users/Kristian/Git/kb.yahoo")
 devtools::document(pkg = "C:/Users/Kristian/Git/kb.yahoo")
 devtools::test(stop_on_failure = TRUE)
+devtools::check()
+
+devtools::install("C:/Users/Kristian/Git/kb.yahoo", upgrade = FALSE)
+
+library(kb.yahoo)
+
+f_get_symbol()

@@ -1,0 +1,31 @@
+Exchange_index;Company_Name;Symbol;Company_Symbol;Volume
+OMX;Essity AB (publ);ESSITY-B.ST;Essity AB (publ) (ESSITY-B.ST);934,286
+OMX;Sandvik AB;SAND.ST;Sandvik AB (SAND.ST);1,861,321
+OMX;Telefonaktiebolaget LM Ericsson (publ);ERIC-B.ST;Telefonaktiebolaget LM Ericsson (publ) (ERIC-B.ST);4,103,646
+OMX;Swedbank AB (publ);SWED-A.ST;Swedbank AB (publ) (SWED-A.ST);2,824,009
+OMX;Skandinaviska Enskilda Banken AB (publ.);SEB-A.ST;Skandinaviska Enskilda Banken AB (publ.) (SEB-A.ST);1,776,082
+OMX;Swedish Match AB (publ);SWMA.ST;Swedish Match AB (publ) (SWMA.ST);1,197,830
+OMX;AB SKF (publ);SKF-B.ST;AB SKF (publ) (SKF-B.ST);1,203,786
+OMX;Tele2 AB (publ);TEL2-B.ST;Tele2 AB (publ) (TEL2-B.ST);1,523,921
+OMX;Svenska Handelsbanken AB (publ);SHB-A.ST;Svenska Handelsbanken AB (publ) (SHB-A.ST);3,928,482
+OMX;Telia Company AB (publ);TELIA.ST;Telia Company AB (publ) (TELIA.ST);7,774,842
+OMX;H & M Hennes & Mauritz AB (publ);HM-B.ST;H & M Hennes & Mauritz AB (publ) (HM-B.ST);1,550,544
+OMX;Investor AB (publ);INVE-B.ST;Investor AB (publ) (INVE-B.ST);642,221
+OMX;Svenska Cellulosa Aktiebolaget SCA (publ);SCA-B.ST;Svenska Cellulosa Aktiebolaget SCA (publ) (SCA-B.ST);1,464,107
+OMX;Alfa Laval AB (publ);ALFA.ST;Alfa Laval AB (publ) (ALFA.ST);552,403
+OMX;AB Electrolux (publ);ELUX-B.ST;AB Electrolux (publ) (ELUX-B.ST);807,712
+OMX;Nordea Bank Abp;NDA-SE.ST;Nordea Bank Abp (NDA-SE.ST);6,922,353
+OMX;Autoliv, Inc.;ALIV-SDB.ST;Autoliv, Inc. (ALIV-SDB.ST);142,766
+OMX;Securitas AB;SECU-B.ST;Securitas AB (SECU-B.ST);1,449,037
+OMX;Hexagon AB (publ);HEXA-B.ST;Hexagon AB (publ) (HEXA-B.ST);324,861
+OMX;Skanska AB (publ);SKA-B.ST;Skanska AB (publ) (SKA-B.ST);806,715
+OMX;ABB Ltd;ABB.ST;ABB Ltd (ABB.ST);806,160
+OMX;Kinnevik AB;KINV-B.ST;Kinnevik AB (KINV-B.ST);577,939
+OMX;ASSA ABLOY AB (publ);ASSA-B.ST;ASSA ABLOY AB (publ) (ASSA-B.ST);2,232,794
+OMX;Evolution Gaming Group AB (publ);EVO.ST;Evolution Gaming Group AB (publ) (EVO.ST);829,940
+OMX;AB Volvo (publ);VOLV-B.ST;AB Volvo (publ) (VOLV-B.ST);4,741,260
+OMX;AstraZeneca PLC;AZN.ST;AstraZeneca PLC (AZN.ST);987,240
+OMX;Getinge AB;GETI-B.ST;Getinge AB (GETI-B.ST);609,141
+OMX;Atlas Copco AB;ATCO-B.ST;Atlas Copco AB (ATCO-B.ST);617,685
+OMX;Boliden AB (publ);BOL.ST;Boliden AB (publ) (BOL.ST);2,680,789
+OMX;Atlas Copco AB;ATCO-A.ST;Atlas Copco AB (ATCO-A.ST);1,607,256

@@ -1,0 +1,31 @@
+Exchange_index;Company_Name;Symbol;Company_Symbol;Volume
+OMXCXC20GI;Lollands Bank A/S;LOLB.CO;Lollands Bank A/S (LOLB.CO);198
+OMXCXC20GI;Scandinavian Investment Group A/S;SIG.CO;Scandinavian Investment Group A/S (SIG.CO);15,533
+OMXCXC20GI;BioPorto A/S;BIOPOR.CO;BioPorto A/S (BIOPOR.CO);810,057
+OMXCXC20GI;Scandinavian Tobacco Group A/S;STG.CO;Scandinavian Tobacco Group A/S (STG.CO);94,828
+OMXCXC20GI;Aalborg Boldspilklub A/S;AAB.CO;Aalborg Boldspilklub A/S (AAB.CO);938
+OMXCXC20GI;Strategic Investments A/S;STRINV.CO;Strategic Investments A/S (STRINV.CO);5,000
+OMXCXC20GI;ChemoMetec A/S;CHEMM.CO;ChemoMetec A/S (CHEMM.CO);79,379
+OMXCXC20GI;InterMail A/S;IMAIL.CO;InterMail A/S (IMAIL.CO);175
+OMXCXC20GI;Kreditbanken A/S;KRE.CO;Kreditbanken A/S (KRE.CO);4
+OMXCXC20GI;SAS AB (publ);SAS-DKK.CO;SAS AB (publ) (SAS-DKK.CO);11,614,649
+OMXCXC20GI;TORM plc;TRMD-A.CO;TORM plc (TRMD-A.CO);203,766
+OMXCXC20GI;A.P. Møller - Mærsk A/S;MAERSK-A.CO;A.P. Møller - Mærsk A/S (MAERSK-A.CO);9,913
+OMXCXC20GI;Brøndbyernes IF Fodbold A/S;BIF.CO;Brøndbyernes IF Fodbold A/S (BIF.CO);842,012
+OMXCXC20GI;Matas A/S;MATAS.CO;Matas A/S (MATAS.CO);166,333
+OMXCXC20GI;Sanistål A/S;SANI.CO;Sanistål A/S (SANI.CO);2,474
+OMXCXC20GI;Copenhagen Capital A/S;CPHCAP-ST.CO;Copenhagen Capital A/S (CPHCAP-ST.CO);29,830
+OMXCXC20GI;Boozt AB (publ);BOOZT-DKK.CO;Boozt AB (publ) (BOOZT-DKK.CO);50,422
+OMXCXC20GI;HusCompagniet A/S;HUSCO.CO;HusCompagniet A/S (HUSCO.CO);4,497
+OMXCXC20GI;Vestjysk Bank A/S;VJBA.CO;Vestjysk Bank A/S (VJBA.CO);641,072
+OMXCXC20GI;cBrain A/S;CBRAIN.CO;cBrain A/S (CBRAIN.CO);41,951
+OMXCXC20GI;G4S plc;G4S.CO;G4S plc (G4S.CO);107,979
+OMXCXC20GI;P/F Atlantic Petroleum;ATLA-DKK.CO;P/F Atlantic Petroleum (ATLA-DKK.CO);28,610
+OMXCXC20GI;PARKEN Sport & Entertainment A/S;PARKEN.CO;PARKEN Sport & Entertainment A/S (PARKEN.CO);4,932
+OMXCXC20GI;Topdanmark A/S;TOP.CO;Topdanmark A/S (TOP.CO);124,359
+OMXCXC20GI;Orphazyme A/S;ORPHA.CO;Orphazyme A/S (ORPHA.CO);139,820
+OMXCXC20GI;Sparekassen Sjælland-Fyn A/S;SPKSJF.CO;Sparekassen Sjælland-Fyn A/S (SPKSJF.CO);22,447
+OMXCXC20GI;NNIT A/S;NNIT.CO;NNIT A/S (NNIT.CO);28,816
+OMXCXC20GI;Gyldendal A/S;GYLD-A.CO;Gyldendal A/S (GYLD-A.CO);2
+OMXCXC20GI;H+H International A/S;HH.CO;H+H International A/S (HH.CO);131,560
+OMXCXC20GI;Danske Andelskassers Bank A/S;DAB.CO;Danske Andelskassers Bank A/S (DAB.CO);77,247

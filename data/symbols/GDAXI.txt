@@ -1,0 +1,31 @@
+Exchange_index;Company_Name;Symbol;Company_Symbol;Volume
+GDAXI;Linde plc;LIN.DE;Linde plc (LIN.DE);493,372
+GDAXI;Bayer Aktiengesellschaft;BAYN.DE;Bayer Aktiengesellschaft (BAYN.DE);2,485,306
+GDAXI;Vonovia SE;VNA.DE;Vonovia SE (VNA.DE);756,877
+GDAXI;MULTI-UNITS LUXEMBOURG - Lyxor Euro Government Bond (DR) UCITS ETF - Acc;MTX.DE;MULTI-UNITS LUXEMBOURG - Lyxor Euro Government Bond (DR) UCITS ETF - Acc (MTX.DE);268,384
+GDAXI;Münchener Rückversicherungs-Gesellschaft Aktiengesellschaft in München;MUV2.DE;Münchener Rückversicherungs-Gesellschaft Aktiengesellschaft in München (MUV2.DE);244,936
+GDAXI;Deutsche Wohnen SE;DWNI.DE;Deutsche Wohnen SE (DWNI.DE);469,059
+GDAXI;Deutsche Telekom AG;DTE.DE;Deutsche Telekom AG (DTE.DE);8,983,423
+GDAXI;BASF SE;BAS.DE;BASF SE (BAS.DE);1,907,928
+GDAXI;HeidelbergCement AG;HEI.DE;HeidelbergCement AG (HEI.DE);533,450
+GDAXI;RWE Aktiengesellschaft;RWE.DE;RWE Aktiengesellschaft (RWE.DE);2,562,238
+GDAXI;E.ON SE;EOAN.DE;E.ON SE (EOAN.DE);6,527,688
+GDAXI;Bayerische Motoren Werke Aktiengesellschaft;BMW.DE;Bayerische Motoren Werke Aktiengesellschaft (BMW.DE);815,834
+GDAXI;Allianz SE;ALV.DE;Allianz SE (ALV.DE);723,987
+GDAXI;Delivery Hero SE;DHER.DE;Delivery Hero SE (DHER.DE);321,992
+GDAXI;adidas AG;ADS.DE;adidas AG (ADS.DE);377,459
+GDAXI;Henkel AG & Co. KGaA;HEN3.DE;Henkel AG & Co. KGaA (HEN3.DE);307,449
+GDAXI;Covestro AG;1COV.DE;Covestro AG (1COV.DE);655,555
+GDAXI;Daimler AG;DAI.DE;Daimler AG (DAI.DE);2,214,265
+GDAXI;Beiersdorf Aktiengesellschaft;BEI.DE;Beiersdorf Aktiengesellschaft (BEI.DE);207,466
+GDAXI;SAP SE;SAP.DE;SAP SE (SAP.DE);1,944,941
+GDAXI;Deutsche Post AG;DPW.DE;Deutsche Post AG (DPW.DE);2,357,566
+GDAXI;Deutsche Börse AG;DB1.DE;Deutsche Börse AG (DB1.DE);414,048
+GDAXI;Continental Aktiengesellschaft;CON.DE;Continental Aktiengesellschaft (CON.DE);369,600
+GDAXI;Infineon Technologies AG;IFX.DE;Infineon Technologies AG (IFX.DE);3,339,972
+GDAXI;MERCK Kommanditgesellschaft auf Aktien;MRK.DE;MERCK Kommanditgesellschaft auf Aktien (MRK.DE);229,627
+GDAXI;Fresenius SE & Co. KGaA;FRE.DE;Fresenius SE & Co. KGaA (FRE.DE);1,725,869
+GDAXI;Siemens Aktiengesellschaft;SIE.DE;Siemens Aktiengesellschaft (SIE.DE);1,432,898
+GDAXI;Deutsche Bank Aktiengesellschaft;DBK.DE;Deutsche Bank Aktiengesellschaft (DBK.DE);12,475,868
+GDAXI;Volkswagen AG;VOW3.DE;Volkswagen AG (VOW3.DE);970,517
+GDAXI;Fresenius Medical Care AG & Co. KGaA;FME.DE;Fresenius Medical Care AG & Co. KGaA (FME.DE);1,582,115
