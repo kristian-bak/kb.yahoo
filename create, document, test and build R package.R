@@ -53,4 +53,5 @@ devtools::install("C:/Users/Kristian/Git/kb.yahoo", upgrade = FALSE)
 
 library(kb.yahoo)
 
-f_get_symbol()
+
+

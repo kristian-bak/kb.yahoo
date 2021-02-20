@@ -44,8 +44,11 @@ f_load_one <- function(ticker, from_date = "2014-01-01") {
   
   data <- f_try_catch(quantmod::getSymbols(ticker, auto.assign = FALSE, 
                                            from = from_date, src = 'yahoo'))
+  str_stock <- f_get_stock(ticker = ticker)
+  
   if (is.null(data$value)) {
-    dt <- data.table::data.table("Ticker" = ticker, 
+    dt <- data.table::data.table("Company" = str_stock,
+                                 "Ticker" = ticker, 
                                  "Date" = NA, "Open" = NA, 
                                  "Low" = NA, "High" = NA, 
                                  "Close" = NA, "Adjusted" = NA, 
@@ -60,11 +63,18 @@ f_load_one <- function(ticker, from_date = "2014-01-01") {
   var_rename <- c("Open", "High", "Low", "Close", "Volume", "Adjusted", "Date")
   
   data.table::setnames(data, old = names(data), new = var_rename)
-
+  
+  str_company <- f_get_stock(ticker = ticker)
+  
+  if (length(str_company) > 1) {
+    warning("Multiple companies matched the ticker code. The first name was selected")
+  }
+  
+  data$Company <- str_company[1]
   data[, Change := f_change(Close)][]
   data[, Ticker := ticker]
   
-  data.table::setcolorder(data, neworder = c("Ticker", "Date", "Open", "Low", "High", 
+  data.table::setcolorder(data, neworder = c("Company", "Ticker", "Date", "Open", "Low", "High", 
                                              "Close", "Adjusted", "Change", "Volume"))
   
   return(data)

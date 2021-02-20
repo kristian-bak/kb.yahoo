@@ -76,3 +76,33 @@ f_get_symbol <- function(stock = "NOVO", index = NULL, output = "vector") {
     return(df_out)
   }
 }
+
+#' This function returns company name code for a given ticker code
+#' @param ticker ticker code   
+#' @param index Index name. Supply either ticker code or index, not both. Index can be a vector.
+#'
+#' @return A vector with company names matching the input name(ticker or index).
+#' @export
+
+f_get_stock <- function(ticker, index = NULL) {
+  
+  data("symbols", package = "kb.yahoo", envir = environment())
+  
+  if (!is.null(index)) {
+    if (!any(c("GDAXI", "OMX", "OMXC25", "OMXCXC20GI") %in% index)) {
+      stop("index should be either GDAXI, OMX, OMXC25, OMXCXC20GI or a vector combination of these")
+    }
+    company <- symbols$Company_Name[symbols$Exchange_index %in% index]
+    str_ticker <- index
+  } else {
+    company <- symbols$Company_Name[symbols$Symbol == ticker]
+    str_ticker <- ticker
+  }
+  
+  if (length(company) == 0) {
+    return(paste0("No company found for ticker code/index ", str_ticker))
+  }
+  
+  return(company)
+  
+}
