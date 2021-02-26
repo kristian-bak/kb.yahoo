@@ -54,4 +54,3 @@ devtools::install("C:/Users/Kristian/Git/kb.yahoo", upgrade = FALSE)
 library(kb.yahoo)
 
 
-

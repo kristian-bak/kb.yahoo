@@ -1,3 +1,21 @@
+#' Lag function
+#' @param x A vector to perform lag on
+#' @param n number of elements to shift. Default is 1.
+#' @export
+#' @examples
+#' f_lag(x = 1:10, n = 1)
+#'
+
+f_lag <- function(x, n = 1) {
+  
+  if (n == 0) {
+    return(x)
+  }
+  
+  id <- 1:n
+  x <- c(x[-id], rep(NA, n))
+  return(x)
+}
 
 #' This function calculates the slope of a moving average
 #' @param data data.table. data should be a obj an outcome from f_indicators to ensure MA is present in data.
