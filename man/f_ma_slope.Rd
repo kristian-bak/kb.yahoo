@@ -8,6 +8,8 @@ f_ma_slope(data, n = 10)
 }
 \arguments{
 \item{data}{data.table. data should be a obj an outcome from f_indicators to ensure MA is present in data.}
+
+\item{n}{number of days used to calculate the slope}
 }
 \value{
 data.table object with moving average slope for each day

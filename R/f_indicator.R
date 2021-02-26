@@ -17,6 +17,7 @@ f_slope <- function(data) {
 
 #' This function calculates the slope of a moving average based on n data points
 #' @param data data.table. data should be a obj an outcome from f_indicators to ensure MA is present in data.
+#' @param n number of days used to calculate the slope
 #' @return data.table object with moving average slope for each day
 #' @import data.table 
 
@@ -68,9 +69,6 @@ f_indicator <- function(data, n = 10, m = 5) {
   ## Relative Strength Index 
   data$RSI <- TTR::RSI(data$Close)
   
-  ## Stochastic %K (14, 3, 3)
-  df_stoch <- TTR::stoch(HLC = data[, c("High", "Low", "Close")], nFastK = 14, nFastD = 3, nSlowD = 3)
-  #data$StochasticK <- 1
   ## Commodity Channel Index (20)	
   data$CCI <- TTR::CCI(HLC = data[, c("High", "Low", "Close")], n = 20)
   
@@ -158,8 +156,13 @@ f_indicator <- function(data, n = 10, m = 5) {
   ## MA
   data$MA <- TTR::SMA(data$Close, n = m)
   
-  ## MA5 slope
-  data$MA_slope <- f_ma_slope(data, n = n)
+  ## MA slopes
+  data$MA5_slope <- f_ma_slope(data, n = 5)
+  data$MA10_slope <- f_ma_slope(data, n = 10)
+  data$MA20_slope <- f_ma_slope(data, n = 20)
+  data$MA50_slope <- f_ma_slope(data, n = 50)
+  data$MA100_slope <- f_ma_slope(data, n = 100)
+  data$MA200_slope <- f_ma_slope(data, n = 200)
   
   return(data)
   
