@@ -1,7 +1,7 @@
 Package: yahoo
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
+Title: Simple data loading from yahoo
+Version: 1.0.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
@@ -9,3 +9,10 @@ Description: More about what it does (maybe more than one line)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    quantmod,
+    dplyr
