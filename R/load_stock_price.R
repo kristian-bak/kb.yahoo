@@ -4,17 +4,21 @@
 #'
 load_stock_price <- function(ticker) {
 
-  close <- get_stock_price(ticker = ticker)
+  url <- paste0("https://finance.yahoo.com/quote/", ticker, "/history?p=", ticker)
 
-  dplyr::tibble(
-    Date = Sys.Date() %>% as.Date(),
-    Open = NA,
-    High = NA,
-    Low = NA,
-    Close = close,
-    Adjusted = NA,
-    Change = NA,
-    Volume = NA
-  )
+  webpage <- rvest::read_html(url)
+
+  webpage %>%
+    rvest::html_table() %>%
+    purrr::pluck(1) %>%
+    dplyr::slice(1) %>%
+    dplyr::rename(Close = `Close*`, Adjusted = `Adj Close**`) %>%
+    dplyr::mutate(Date = as.Date(Date, format = "%b %d, %Y"),
+                  Open = Open %>% as.numeric(),
+                  High = High %>% as.numeric(),
+                  Low = Low %>% as.numeric(),
+                  Close = Close %>% as.numeric(),
+                  Adjusted = Adjusted %>% as.numeric(),
+                  Volume = as_numeric(Volume))
 
 }
