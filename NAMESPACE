@@ -2,4 +2,5 @@
 
 export("%>%")
 export(load_data)
+export(load_stock_price)
 importFrom(magrittr,"%>%")

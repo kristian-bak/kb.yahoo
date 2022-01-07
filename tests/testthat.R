@@ -1,4 +1,4 @@
 library(testthat)
-library(yahoo)
+library(kb.yahoo)
 
-test_check("yahoo")
+test_check("kb.yahoo")
