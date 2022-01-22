@@ -4,10 +4,12 @@
 \alias{load_data}
 \title{Load data from Yahoo.}
 \usage{
-load_data(ticker, from = "2014-01-01")
+load_data(ticker, src = "yahoo", from = "2014-01-01")
 }
 \arguments{
 \item{ticker}{ticker code from Yahoo.}
+
+\item{src}{source name ("yahoo" or "FRED")}
 
 \item{from}{load data `from` untill today where the format of `from` is yyyy-mm-dd.}
 }
