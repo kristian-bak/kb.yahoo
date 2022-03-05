@@ -8,6 +8,8 @@ price_change(x, digits = 5)
 }
 \arguments{
 \item{x}{stock price}
+
+\item{digits}{number of digits used in rounding}
 }
 \value{
 A numerical vector with prince changes in percent

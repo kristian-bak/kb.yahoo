@@ -23,4 +23,8 @@ Load data from Yahoo.
 # Load NOVO data since 2021-01-01
 data <- load_data(ticker = "NOVO-B.CO", from = "2021-01-01")
 data
+
+# Load Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity
+data <- load_data(ticker = "DGS10", src = "FRED")
+data
 }

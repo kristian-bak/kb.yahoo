@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# kb.yahoo
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of kb.yahoo is to create a simple wrapper for `quantmod` in order to load stock data and data from FRED. 
+
+## Installation
+
+You can install the development version of kb.yahoo from [GitHub](https://github.com/) with:
+
+```{r, eval = FALSE}
+devtools::install_github("kristian-bak/yahoo")
+```
+
+
+## Example
+
+```{r, label = "Load data"}
+library(kb.yahoo)
+load_data(ticker = "NOVO-B.CO", from = "2022-01-01")
+```
+

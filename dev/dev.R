@@ -5,6 +5,9 @@ devtools::document()
 ## Load
 devtools::load_all()
 
+## Run tests
+devtools::test()
+
 ## Checking if everything works as expected
 devtools::check()
 
@@ -26,7 +29,7 @@ devtools::test()
 ## See test coverage (Restart R session first, alternatively Click Addins -> Calculate package test coverage)
 devtools::test_coverage()
 
-## Bump versionnumber
+## Bump version number
 usethis::use_version()
 
 ## Add pipe operator
@@ -34,3 +37,9 @@ usethis::use_pipe()
 
 ## Test installing
 devtools::install()
+
+## Add README
+usethis::use_readme_rmd()
+
+## Add NEWS file
+usethis::use_news_md()
