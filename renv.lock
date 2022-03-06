@@ -30,6 +30,13 @@
       "Repository": "CRAN",
       "Hash": "e8a22846fff485f0be3770c2da758713"
     },
+    "base64enc": {
+      "Package": "base64enc",
+      "Version": "0.1-3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "543776ae6848fde2f48ff3816d0628bc"
+    },
     "brew": {
       "Package": "brew",
       "Version": "1.0-6",
@@ -43,6 +50,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "976cf154dfb043c012d87cddd8bca363"
+    },
+    "bslib": {
+      "Package": "bslib",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "56ae7e1987b340186a8a5a157c2ec358"
     },
     "cachem": {
       "Package": "cachem",
@@ -219,6 +233,13 @@
       "Repository": "CRAN",
       "Hash": "8eb36c8125038e648e5d111c0d7b2ed4"
     },
+    "htmltools": {
+      "Package": "htmltools",
+      "Version": "0.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "526c484233f42522278ab06fb185cb26"
+    },
     "httr": {
       "Package": "httr",
       "Version": "1.4.2",
@@ -232,6 +253,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "6154ec2223172bce8162d4153cda21f7"
+    },
+    "jquerylib": {
+      "Package": "jquerylib",
+      "Version": "0.1.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5aab57a3bd297eee1c1d862735972182"
     },
     "jsonlite": {
       "Package": "jsonlite",
@@ -401,6 +429,13 @@
       "Repository": "CRAN",
       "Hash": "0879f5388fe6e4d56d7ef0b7ccb031e5"
     },
+    "rmarkdown": {
+      "Package": "rmarkdown",
+      "Version": "2.12",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "354da5088ddfdffb73c11cc952885d88"
+    },
     "roxygen2": {
       "Package": "roxygen2",
       "Version": "7.1.2",
@@ -435,6 +470,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "bb099886deffecd6f9b298b7d4492943"
+    },
+    "sass": {
+      "Package": "sass",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "50cf822feb64bb3977bda0b7091be623"
     },
     "selectr": {
       "Package": "selectr",
@@ -491,6 +533,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "7243004a708d06d4716717fa1ff5b2fe"
+    },
+    "tinytex": {
+      "Package": "tinytex",
+      "Version": "0.37",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a80abeb527a977e4bef21873d29222dd"
     },
     "usethis": {
       "Package": "usethis",

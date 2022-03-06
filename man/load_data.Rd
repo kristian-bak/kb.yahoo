@@ -4,7 +4,7 @@
 \alias{load_data}
 \title{Load data from Yahoo.}
 \usage{
-load_data(ticker, src = "yahoo", from = "2014-01-01")
+load_data(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE)
 }
 \arguments{
 \item{ticker}{ticker code from Yahoo.}
@@ -12,6 +12,8 @@ load_data(ticker, src = "yahoo", from = "2014-01-01")
 \item{src}{source name ("yahoo" or "FRED")}
 
 \item{from}{load data `from` untill today where the format of `from` is yyyy-mm-dd.}
+
+\item{prefix}{logical (default is TRUE) indicating if ticker name should be included in column name of columns Change and ChangeSinceStart (only applicable for FRED data)}
 }
 \value{
 A data.frame
