@@ -1,3 +1,7 @@
+# kb.yahoo 1.5.1
+
+* Adjusting calculation in `prince_change_since_start`
+
 # kb.yahoo 1.5.0
 
 * Adding `prefix` parameter to `load_data`

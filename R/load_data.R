@@ -63,7 +63,7 @@ load_data <- function(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE)
 #'
 prince_change_since_start <- function(x, start = 1, digits = 4) {
 
-  round(100 * ((x - x[start]) / x), digits = digits)
+  round(100 * ((x - x[start]) / x[start]), digits = digits)
 
 }
 
