@@ -23,6 +23,17 @@ test_that("Load yahoo data works", {
 
 })
 
+test_that("Load yahoo data with modified dates works", {
+
+  data <- load_data(ticker = "TSLA", from = Sys.Date() - 7)
+
+  expect_equal(class(data)[1], "tbl_df")
+
+  expect_equal(names(data), c("Date", "Open", "High", "Low", "Close", "Adjusted", "Change",
+                              "ChangeSinceStart", "Volume"))
+
+})
+
 test_that("Load FRED data works", {
 
   data <- load_data(ticker = "MORTGAGE30US", src = "FRED")

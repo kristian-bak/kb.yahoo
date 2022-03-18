@@ -19,16 +19,37 @@ load_data <- function(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE)
   options("getSymbols.warning4.0" = FALSE)
 
   data <- catch_error(
-    quantmod::getSymbols(ticker, auto.assign = FALSE, from = from, src = src)
+    quantmod::getSymbols(ticker, auto.assign = FALSE, from = from,
+                         src = src, return.class = "data.frame")
   )
 
   if (!is.null(data$error)) {
     stop(paste0("Load data failed for ", ticker))
   }
 
-  data <- data$value %>%
-    as.data.frame() %>%
-    dplyr::mutate(Date = rownames(.) %>% as.Date()) %>%
+  data <- data$value
+
+  row_names <- rownames(data)
+
+  modify_dates <- row_names %>%
+    grepl(pattern = "X", x = .) %>%
+    any()
+
+  if (modify_dates) {
+
+    data$Date <- row_names %>%
+      substring(text = ., first = 2, last = 11) %>%
+      gsub("\\.", "-", x = .) %>%
+      as.Date()
+
+  } else {
+
+    data <- data %>%
+      dplyr::mutate(Date = rownames(.) %>% as.Date())
+
+  }
+
+  data <- data %>%
     dplyr::as_tibble()
 
   if (src == "yahoo") {
