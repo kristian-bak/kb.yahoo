@@ -1,3 +1,7 @@
+# kb.yahoo 1.5.3
+
+* Fixing bux in `load_stock_price` related to missing data
+
 # kb.yahoo 1.5.2
 
 * Bug fix related to `load_data` where quantmod returns rownames having ambiguous dates

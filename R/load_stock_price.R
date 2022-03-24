@@ -8,17 +8,47 @@ load_stock_price <- function(ticker) {
 
   webpage <- rvest::read_html(url)
 
-  webpage %>%
+  df <- webpage %>%
     rvest::html_table() %>%
     purrr::pluck(1) %>%
+    dplyr::slice(1:2) %>%
+    dplyr::rename(Close = `Close*`, Adjusted = `Adj Close**`)
+
+  skip_first_row <- df %>%
     dplyr::slice(1) %>%
-    dplyr::rename(Close = `Close*`, Adjusted = `Adj Close**`) %>%
+    dplyr::select(Open, High, Low, Close, Adjusted) %>%
+    t() %>%
+    as.data.frame() %>%
+    dplyr::pull(V1) %>%
+    is_all_blank()
+
+  if (skip_first_row) {
+
+    id <- 2
+
+  } else {
+
+    id <- 1
+
+  }
+
+  df %>%
+    dplyr::slice(id) %>%
     dplyr::mutate(Date = as.Date(Date, format = "%b %d, %Y"),
                   Open = Open %>% as.numeric(),
                   High = High %>% as.numeric(),
                   Low = Low %>% as.numeric(),
                   Close = Close %>% as.numeric(),
                   Adjusted = Adjusted %>% as.numeric(),
+                  Volume = replace(x = Volume, Volume == "-", values = NA),
                   Volume = as_numeric(Volume))
+
+}
+
+#' Is all blank
+#' @param x vector of any class
+is_all_blank <- function(x) {
+
+  all(x == "-")
 
 }
