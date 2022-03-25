@@ -1,6 +1,10 @@
+# kb.yahoo 1.5.4
+
+* Loading day 3 if both day 1 and 2 are missing in `load_stock_price`
+
 # kb.yahoo 1.5.3
 
-* Fixing bux in `load_stock_price` related to missing data
+* Fixing bug in `load_stock_price` related to missing data
 
 # kb.yahoo 1.5.2
 

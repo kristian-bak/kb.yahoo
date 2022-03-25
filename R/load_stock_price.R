@@ -11,7 +11,7 @@ load_stock_price <- function(ticker) {
   df <- webpage %>%
     rvest::html_table() %>%
     purrr::pluck(1) %>%
-    dplyr::slice(1:2) %>%
+    dplyr::slice(1:3) %>%
     dplyr::rename(Close = `Close*`, Adjusted = `Adj Close**`)
 
   skip_first_row <- df %>%
@@ -22,13 +22,25 @@ load_stock_price <- function(ticker) {
     dplyr::pull(V1) %>%
     is_all_blank()
 
-  if (skip_first_row) {
+  skip_second_row <- df %>%
+    dplyr::slice(2) %>%
+    dplyr::select(Open, High, Low, Close, Adjusted) %>%
+    t() %>%
+    as.data.frame() %>%
+    dplyr::pull(V1) %>%
+    is_all_blank()
+
+  if (!skip_first_row) {
+
+    id <- 1
+
+  } else if (!skip_second_row) {
 
     id <- 2
 
   } else {
 
-    id <- 1
+    id <- 3
 
   }
 
