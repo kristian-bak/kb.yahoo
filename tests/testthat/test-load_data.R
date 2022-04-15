@@ -2,7 +2,7 @@ test_that("Load yahoo data works", {
 
   data <- load_data(ticker = "NOVO-B.CO", from = "2021-01-01")
 
-  cols <- c("Date", "Open", "High", "Low", "Close", "Adjusted", "Change", "ChangeSinceStart", "Volume")
+  cols <- c("Ticker", "Date", "Open", "High", "Low", "Close", "Adjusted", "Change", "ChangeSinceStart", "Volume")
 
   ## Expecting identical column names
   expect_identical(names(data), cols)
@@ -29,7 +29,7 @@ test_that("Load yahoo data with modified dates works", {
 
   expect_equal(class(data)[1], "tbl_df")
 
-  expect_equal(names(data), c("Date", "Open", "High", "Low", "Close", "Adjusted", "Change",
+  expect_equal(names(data), c("Ticker", "Date", "Open", "High", "Low", "Close", "Adjusted", "Change",
                               "ChangeSinceStart", "Volume"))
 
 })
@@ -38,7 +38,7 @@ test_that("Load FRED data works", {
 
   data <- load_data(ticker = "MORTGAGE30US", src = "FRED")
 
-  cols <- c("Date", "MORTGAGE30US", "MORTGAGE30US_Change", "MORTGAGE30US_ChangeSinceStart")
+  cols <- c("Ticker", "Date", "MORTGAGE30US", "MORTGAGE30US_Change", "MORTGAGE30US_ChangeSinceStart")
 
   ## Expecting identical column names
   expect_identical(names(data), cols)
@@ -53,9 +53,28 @@ test_that("Load FRED data works", {
 
   data2 <- load_data(ticker = "MORTGAGE30US", src = "FRED", prefix = FALSE)
 
-  cols <- c("Date", "Close", "Change", "ChangeSinceStart")
+  cols <- c("Ticker", "Date", "Close", "Change", "ChangeSinceStart")
 
   ## Expecting identical column names
   expect_identical(names(data2), cols)
+
+})
+
+test_that("Load multiple stocks work", {
+
+  data <- load_data(ticker = c("NOVO-B.CO", "TSLA"), from = "2021-01-01")
+
+  expect_equal(data %>%
+    dplyr::pull(Ticker) %>%
+    unique(),
+    c("NOVO-B.CO", "TSLA")
+  )
+
+  expect_true(
+    data %>%
+      dplyr::slice(1) %>%
+      dplyr::pull(Close) %>%
+      is.numeric()
+  )
 
 })

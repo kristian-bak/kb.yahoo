@@ -3,6 +3,7 @@
 #' @param src source name ("yahoo" or "FRED")
 #' @param from load data `from` untill today where the format of `from` is yyyy-mm-dd.
 #' @param prefix logical (default is TRUE) indicating if ticker name should be included in column name of columns Change and ChangeSinceStart (only applicable for FRED data)
+#' @param verbose logical (default is TRUE) indicating if loop counter show be shown
 #' @return A data.frame
 #' @examples
 #' # Load NOVO data since 2021-01-01
@@ -13,10 +14,44 @@
 #' data <- load_data(ticker = "DGS10", src = "FRED")
 #' data
 #' @export
-#'
-load_data <- function(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE) {
+
+load_data <- function(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE, verbose = TRUE) {
 
   options("getSymbols.warning4.0" = FALSE)
+
+  n <- length(ticker)
+
+  src    <- replicate(n = n, expr = src)
+  from   <- replicate(n = n, expr = from)
+  prefix <- replicate(n = n, expr = prefix)
+
+  data_list <- list()
+
+  for (i in 1:n) {
+
+    data_list[[i]] <- load_one_stock(
+      ticker = ticker[i],
+      src = src[i],
+      from = from[i],
+      prefix = prefix[i]
+    )
+
+    if (verbose) {
+      cat("\r", i, "of", n)
+      flush.console()
+    }
+
+  }
+
+  df_out <- do.call("rbind", data_list)
+
+  return(df_out)
+
+}
+
+#' @inheritParams load_data
+#'
+load_one_stock <- function(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE) {
 
   data <- catch_error(
     quantmod::getSymbols(ticker, auto.assign = FALSE, from = from,
@@ -28,6 +63,7 @@ load_data <- function(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE)
   }
 
   data <- data$value
+  data$Ticker <- ticker
 
   row_names <- rownames(data)
 
@@ -58,7 +94,7 @@ load_data <- function(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE)
       dplyr::rename_with(.data = ., ~ gsub(paste0(ticker, "."), "", .x)) %>%
       dplyr::mutate(Change = price_change(Close, digits = 4),
                     ChangeSinceStart = prince_change_since_start(Close, digits = 4)) %>%
-      dplyr::relocate(Date, Open, High, Low, Close, Adjusted, Change, ChangeSinceStart, Volume)
+      dplyr::relocate(Ticker, Date, Open, High, Low, Close, Adjusted, Change, ChangeSinceStart, Volume)
 
   } else {
 
@@ -66,7 +102,7 @@ load_data <- function(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE)
       dplyr::rename_with(~ gsub(ticker, "Close", .x)) %>%
       dplyr::mutate(Change = price_change(Close, digits = 4),
                     ChangeSinceStart = prince_change_since_start(Close, digits = 4)) %>%
-      dplyr::relocate(Date, Close, Change, ChangeSinceStart) %>%
+      dplyr::relocate(Ticker, Date, Close, Change, ChangeSinceStart) %>%
       rename_cols(ticker = ticker, rename = prefix)
 
   }

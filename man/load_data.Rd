@@ -4,7 +4,13 @@
 \alias{load_data}
 \title{Load data from Yahoo.}
 \usage{
-load_data(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE)
+load_data(
+  ticker,
+  src = "yahoo",
+  from = "2014-01-01",
+  prefix = TRUE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{ticker}{ticker code from Yahoo.}
@@ -14,6 +20,8 @@ load_data(ticker, src = "yahoo", from = "2014-01-01", prefix = TRUE)
 \item{from}{load data `from` untill today where the format of `from` is yyyy-mm-dd.}
 
 \item{prefix}{logical (default is TRUE) indicating if ticker name should be included in column name of columns Change and ChangeSinceStart (only applicable for FRED data)}
+
+\item{verbose}{logical (default is TRUE) indicating if loop counter show be shown}
 }
 \value{
 A data.frame

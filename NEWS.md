@@ -1,3 +1,7 @@
+# kb.yahoo 2.0.0
+
+* Allowing multiple ticker inputs in `load_data`
+
 # kb.yahoo 1.5.4
 
 * Loading day 3 if both day 1 and 2 are missing in `load_stock_price`
