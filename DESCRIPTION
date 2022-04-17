@@ -18,4 +18,5 @@ Imports:
     dplyr,
     magrittr,
     rvest,
-    purrr
+    purrr,
+    xml2

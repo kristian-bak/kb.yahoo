@@ -21,6 +21,7 @@ usethis::use_package("dplyr")
 usethis::use_package("quantmod")
 usethis::use_package("rvest")
 usethis::use_package("purrr")
+usethis::use_package("xml2")
 
 usethis::use_test(name = "load_stock_price")
 
