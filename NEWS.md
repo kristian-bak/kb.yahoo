@@ -1,3 +1,7 @@
+# kb.yahoo 2.2.0
+
+* Adding sector and industry functions
+
 # kb.yahoo 2.1.0
 
 * Adding these functions:
