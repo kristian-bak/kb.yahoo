@@ -3,5 +3,7 @@
 export("%>%")
 export(load_data)
 export(load_stock_price)
+export(load_tradingview_pe)
+export(load_yahoo_pe)
 export(prince_change_since_start)
 importFrom(magrittr,"%>%")

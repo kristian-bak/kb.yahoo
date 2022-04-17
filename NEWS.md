@@ -1,3 +1,11 @@
+# kb.yahoo 2.1.0
+
+* Adding these functions:
+
+  - `load_tradingview_pe`: loading multiple PE based on url for a given sector/industry
+  - `load_yahoo_eps`: loading single EPS based on ticker code
+  - `load_yahoo_pe`: loading multiple PE based on ticker codes
+
 # kb.yahoo 2.0.0
 
 * Allowing multiple ticker inputs in `load_data`

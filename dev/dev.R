@@ -8,6 +8,11 @@ devtools::load_all()
 ## Run tests
 devtools::test()
 
+## Add test
+usethis::use_test("load_tradingview_pe")
+usethis::use_test("load_yahoo_eps")
+usethis::use_test("load_yahoo_pe")
+
 ## Checking if everything works as expected
 devtools::check()
 
