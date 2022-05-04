@@ -1,3 +1,7 @@
+# kb.yahoo 2.2.1
+
+* Updating to `quantmod` v0.4.20 (fixing bug "could not establish session after 5 attempts")
+
 # kb.yahoo 2.2.0
 
 * Adding sector and industry functions
