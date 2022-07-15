@@ -25,7 +25,7 @@ The goal of kb.yahoo is to create a simple wrapper for `quantmod` in order to lo
 You can install the development version of kb.yahoo from [GitHub](https://github.com/) with:
 
 ```{r, eval = FALSE}
-devtools::install_github("kristian-bak/yahoo")
+devtools::install_github("kristian-bak/kb.yahoo")
 ```
 
 

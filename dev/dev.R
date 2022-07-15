@@ -8,6 +8,9 @@ devtools::load_all()
 ## Run tests
 devtools::test()
 
+## Bump version number
+usethis::use_version()
+
 ## Add test
 usethis::use_test("load_tradingview_pe")
 usethis::use_test("load_yahoo_eps")
@@ -18,7 +21,7 @@ devtools::check()
 
 ## Add package
 usethis::use_package("dplyr")
-usethis::use_package("quantmod")
+usethis::use_package("quantmod", min_version = "0.4.20")
 usethis::use_package("rvest")
 usethis::use_package("purrr")
 usethis::use_package("xml2")
@@ -34,9 +37,6 @@ devtools::test()
 
 ## See test coverage (Restart R session first, alternatively Click Addins -> Calculate package test coverage)
 devtools::test_coverage()
-
-## Bump version number
-usethis::use_version()
 
 ## Add pipe operator
 usethis::use_pipe()

@@ -1,7 +1,7 @@
 Package: kb.yahoo
 Type: Package
 Title: Simple data loading from yahoo
-Version: 2.2.1
+Version: 2.2.2
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
@@ -14,7 +14,7 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
-    quantmod,
+    quantmod (>= 0.4.20),
     dplyr,
     magrittr,
     rvest,

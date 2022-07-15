@@ -1,3 +1,9 @@
+# kb.yahoo 2.2.2
+
+* Exporting `price_change`
+* Setting minimum version for `quantmod` (v0.4.20)
+* Updating README
+
 # kb.yahoo 2.2.1
 
 * Updating to `quantmod` v0.4.20 (fixing bug "could not establish session after 5 attempts")
